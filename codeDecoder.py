@@ -60,6 +60,9 @@ def binary(text):
 
     decrypt = {value: key for key, value in encrypt.items()}
 
+    if re.match('(\s|-|\.)+', text):
+        return ''.join(decrypt[i] for i in text.split())
+    return ' '.join(encrypt[i] for i in text.upper())
 
 #print(phonetic(s))
 
