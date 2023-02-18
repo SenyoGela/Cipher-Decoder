@@ -1,6 +1,7 @@
 import re
+import time
 
-s = "Papa Yankee Hotel"
+s = "python"
 
 def morse(text):
     encrypt  = {'A':'.-', 'B':'-...', 'C':'-.-.', 'D':'-..', 'E':'.', 'F':'..-.', 'G':'--.', 'H':'....', 'I':'..',
@@ -81,14 +82,18 @@ while True:
     if menu_option == 1:
         morseTxt = str(input("Enter text: ")).upper()
         print("Morse Code:", morse(morseTxt))
+        time.sleep(5)
     if menu_option == 2:
         phoneticTxt = str(input("Enter text: ")).upper()
         print("Phonetics:", phonetic(phoneticTxt))
+        time.sleep(5)
     if menu_option == 3:
         vigenere()
+        time.sleep(5)
     if menu_option == 4:
         binaryTxt = str(input("Enter text: ")).upper()
         print("Binary Code:", binary(binaryTxt))
+        time.sleep(5)
     if menu_option == 5:
         exit = str(input("Are you sure you want to exit (y/n)? ")).lower()
         if exit == "y":
