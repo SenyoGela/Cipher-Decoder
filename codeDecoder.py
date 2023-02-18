@@ -1,3 +1,5 @@
+import re
+
 s = "python"
 
 def morse(text):
@@ -7,6 +9,8 @@ def morse(text):
 
     decrypt  = {value: key for key, value in encrypt. items()}
 
-    if '-' in text:
+    if re.match('(\s|-|\.)+', text):
         return ''.join(decrypt[i] for i in text.split())
     return ' '.join(encrypt[i] for i in text.upper())
+
+print(morse(s))
