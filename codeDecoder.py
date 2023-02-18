@@ -32,7 +32,15 @@ def vigerene_key(string, key):
     else:
         for i in range(len(string) - len(key)):
             key.append(key[i % len(key)])
-    return("".join(key))
+    return ("".join(key))
+
+def vigerene_text(string, key):
+    vigereneText = []
+    for i in range(len(string)):
+        x = (ord(string[i]) +ord(key[i])) % 26
+        x += ord('A')
+        vigereneText.append(chr(x))
+    return ("".join(vigereneText))
 
 
 #print(phonetic(s))
