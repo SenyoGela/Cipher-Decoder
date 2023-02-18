@@ -1,6 +1,6 @@
 import re
 
-s = "python"
+s = "Papa Yankee Hotel"
 
 def morse(text):
     encrypt  = {'A':'.-', 'B':'-...', 'C':'-.-.', 'D':'-..', 'E':'.', 'F':'..-.', 'G':'--.', 'H':'....', 'I':'..',
@@ -21,9 +21,18 @@ def phonetic(text):
 
     decrypt = {value: key for key, value in encrypt.items()}
 
-    if text.isalpha():
+    if re.match('(\s|-|\.)+', text):
         return ''.join(decrypt[i] for i in text.split())
     return ' '.join(encrypt[i] for i in text.upper())
 
+def vigerene_key(string, key):
+    key = list(key)
+    if len(string) == len(key):
+        return(key)
+    else:
+        for i in range(len(string) - len(key)):
+            key.append(key[i % len(key)])
+    return("".join(key))
 
-#print(morse(s))
+
+#print(phonetic(s))
