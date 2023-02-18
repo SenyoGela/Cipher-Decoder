@@ -42,5 +42,13 @@ def vigerene_text(string, key):
         vigereneText.append(chr(x))
     return ("".join(vigereneText))
 
+def vigerene():
+    if __name__ == "__main__":
+        string = input("Text: ").upper()
+        string = string.replace(" ", "")
+        keyword = input("Key: ").upper()
+        key = vigerene_key(string, keyword)
+        vigereneText = vigerene_text(string, key)
+        print("Vigerene Code:", vigereneText)
 
 #print(phonetic(s))
