@@ -9,4 +9,4 @@ def morse(text):
 
     if '-' in text:
         return ''.join(decrypt[i] for i in text.split())
-
+    return ' '.join(encrypt[i] for i in text.upper())
