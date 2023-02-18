@@ -69,5 +69,7 @@ def caesar(text):
                'M':'J', 'N':'K', 'O':'L', 'P':'M', 'Q':'N', 'R':'O', 'S':'P', 'T':'Q', 'U':'R', 'V':'S', 'W':'T', 'X':'U',
                'Y':'V', 'Z':'W'}
 
-print(binary(s))
+    decrypt = {value: key for key, value in encrypt.items()}
+
+print(caesar(s))
 
