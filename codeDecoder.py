@@ -44,9 +44,9 @@ def vigenere_text(string, key):
 
 def vigenere():
     if __name__ == "__main__":
-        string = input("Text: ").upper()
+        string = input("Enter text: ").upper()
         string = string.replace(" ", "")
-        keyword = input("Key: ").upper()
+        keyword = input("Enter key: ").upper()
         key = vigenere_key(string, keyword)
         vigenereText = vigenere_text(string, key)
         print("Vigerene Code:", vigenereText)
@@ -72,7 +72,25 @@ while True:
     print("(3) Vigenere Cipher")
     print("(4) Binary Code")
     print("(5) Exit")
+    print("***************************")
+    print("")
 
+    menu_option = int(input("What would you like to do (1-5)? "))
+    print("")
 
-
+    if menu_option == 1:
+        morseTxt = str(input("Enter text: ")).upper()
+        print("Morse Code:", morse(morseTxt))
+    if menu_option == 2:
+        phoneticTxt = str(input("Enter text: ")).upper()
+        print("Phonetics:", phonetic(phoneticTxt))
+    if menu_option == 3:
+        vigenere()
+    if menu_option == 4:
+        binaryTxt = str(input("Enter text: ")).upper()
+        print("Binary Code:", binary(binaryTxt))
+    if menu_option == 5:
+        exit = str(input("Are you sure you want to exit (y/n)? ")).lower()
+        if exit == "y":
+            break
 
