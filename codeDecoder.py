@@ -64,16 +64,15 @@ def binary(text):
         return ''.join(decrypt[i] for i in text.split())
     return ' '.join(encrypt[i] for i in text.upper())
 
-def caesar(text):
-    encrypt = {'A':'X', 'B':'Y', 'C':'Z', 'D':'A', 'E':'B', 'F':'C', 'G':'D', 'H':'E', 'I':'F', 'J':'G', 'K':'H', 'L':'I',
-               'M':'J', 'N':'K', 'O':'L', 'P':'M', 'Q':'N', 'R':'O', 'S':'P', 'T':'Q', 'U':'R', 'V':'S', 'W':'T', 'X':'U',
-               'Y':'V', 'Z':'W'}
+while True:
+    print("")
+    print("********** MENU **********")
+    print("(1) Morse Code")
+    print("(2) Phonetic Alphabet")
+    print("(3) Vigenere Cipher")
+    print("(4) Binary Code")
+    print("(5) Exit")
 
-    decrypt = {value: key for key, value in encrypt.items()}
 
-    if re.match('(\s|-|\.)+', text):
-        return ''.join(decrypt[i] for i in text.split())
-    return ' '.join(encrypt[i] for i in text.upper())
 
-print(caesar(s))
 
