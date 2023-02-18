@@ -21,6 +21,9 @@ def phonetic(text):
 
     decrypt = {value: key for key, value in encrypt.items()}
 
+    if text.isalpha():
+        return ''.join(decrypt[i] for i in text.split())
+    return ' '.join(encrypt[i] for i in text.upper())
 
 
 #print(morse(s))
