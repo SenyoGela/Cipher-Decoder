@@ -7,3 +7,6 @@ def morse(text):
 
     decrypt  = {value: key for key, value in encrypt. items()}
 
+    if '-' in text:
+        return ''.join(decrypt[i] for i in text.split())
+
